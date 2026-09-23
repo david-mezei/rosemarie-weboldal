@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="hu">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,34 +8,35 @@
   <link id="favicon" rel="icon" type="image/x-icon" href="assets/favicon_dark.ico">
   <script src="change_favicon.js"></script>
   <link rel="preconnect" href="https://fonts.bunny.net" />
-  <link
-  href="https://fonts.bunny.net/css?family=dm-sans:400,600,700|fraunces:600|montserrat:400,600"
-  rel="stylesheet" />
+  <link href="https://fonts.bunny.net/css?family=dm-sans:400,600,700|fraunces:600|montserrat:400,600"
+    rel="stylesheet" />
+  <!-- Shoelace CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/light.css" />
+  <!-- Shoelace JavaScript -->
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
+  <script src="show_popup.js"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header class="site-header"><a class="brand" href="#top"><img
-        src="assets/logo.png"
-        alt="Rosemarie nyelvtanár" /></a>
+  <header class="site-header"><a class="brand" href="#top"><img src="assets/logo.png" alt="Rosemarie nyelvtanár" /></a>
     <nav aria-label="Fő navigáció">
       <details class="services-menu">
-        <summary>Szolgáltatások <img class="chevron"
-            src="assets/chevron-down.png" alt="Chevron Down" /></summary>
+        <summary>Szolgáltatások <img class="chevron" src="assets/chevron-down.png" alt="Chevron Down" /></summary>
         <div class="services-dropdown"><a href="arak.html">Árak</a></div>
       </details><a href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
     </nav>
   </header>
   <main id="top">
     <section class="intro" id="about">
-      <img class="portrait" src="assets/placeholder.jpg"
-        alt="600x400" />
+      <img class="portrait" src="assets/Rosemarie.jpg" alt="600x400" />
       <div class="intro-copy">
         <p class="eyebrow">Üdvözöllek honlapomon!</p>
         <h1>Polgár Rosemarie vagyok, nyelvtanár</h1>
         <div class="rule"></div>
-        <p>Itt tudod hosszabban bemutatni, saját magad vagy a problémát, következményét, fájdalompontot, célcsoport
-          jellemzőit, vágyott végeredményt, szolgáltatást, terméket, termékjellemzőt, funkciót, előnyt, megoldást,
-          megoldási tervet, folyamatot, csapattagot, referenciát, bizonyítékot.</p>
+        <p>A nyelvtanulás számomra az új lehetőségek felfedezéséről szól. Szeretném, hogy tanítványaim örömmel
+          tanuljanak, merjenek megszólalni, és a megszerzett tudást valóban használni is tudják.</p>
         <a class="button button-primary" href="#services">Ismerj meg jobban!</a>
       </div>
     </section>
@@ -42,57 +44,68 @@
       <h2>Miért válassz engem?</h2>
       <div class="cards">
         <article class="card"><span>01.</span>
-          <h3>Meggyőző címsor, röviden leírva</h3>
-          <p>Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy előnyöd,
-            funkciód.</p><a href="#contact">Kattints ide <img
-              src="assets/arrow-right.png" alt="" /></a>
+          <h3>Sokéves nemzetközi és többnyelvű tapasztalat</h3>
+          <p>Svájci-horvát-magyar állampolgárként, első kézből adom át az életszerű, mindennapi nyelvhasználathoz
+            szükséges hasznos tudást. </p><a href="#contact">Kattints ide <img src="assets/arrow-right.png"
+              alt="" /></a>
         </article>
         <article class="card"><span>02.</span>
-          <h3>Meggyőző címsor, röviden leírva</h3>
-          <p>Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy előnyöd,
-            funkciód.</p><a href="#contact">Kattints ide <img
+          <h3>Minden korosztálynak: az első betűktől, az érettségiig</h3>
+          <p>Gyermekeknek (amint ismerik a betűket) és felnőtteknek egyaránt vállalok oktatást, valamint célirányos
+            felkészítést érettségire és nyelvvizsgára is. </p><a href="#contact">Kattints ide <img
               src="assets/arrow-right.png" alt="" /></a>
         </article>
         <article class="card"><span>03.</span>
-          <h3>Meggyőző címsor, röviden leírva</h3>
-          <p>Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy előnyöd,
-            funkciód.</p><a href="#contact">Kattints ide <img
+          <h3>Személyesen vagy online? Te döntöd el!</h3>
+          <p>Tanulj tetszőlegesen Kerekdombon vagy online! </p><a href="#contact">Kattints ide <img
               src="assets/arrow-right.png" alt="" /></a>
         </article>
         <article class="card"><span>04.</span>
-          <h3>Meggyőző címsor, röviden leírva</h3>
-          <p>Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy előnyöd,
-            funkciód.</p><a href="#contact">Kattints ide <img
-              src="assets/arrow-right.png" alt="" /></a>
+          <h3>Öt világnyelv közül választhatsz - egy helyen.</h3>
+          <p>5 népszerű nyelv <span class="vastagbetu">(angol, német, francia, olasz, spanyol)</span> közül választhatsz
+            a céljaidnak megfelelően.</p><a href="#contact">Kattints ide <img src="assets/arrow-right.png" alt="" /></a>
         </article>
       </div>
     </section>
     <section class="callout" id="blog">
-      <h2>Meggyőző címsor, röviden leírva</h2>
+      <h2>Legyél magabiztos idegen nyelven!</h2>
       <div>
-        <p>Itt tudod hosszabban bemutatni, saját magad vagy a problémát, következményét, fájdalompontot, célcsoport
-          jellemzőit, vágyott végeredményt, szolgáltatást, terméket, termékjellemzőt, funkciót, előnyt, megoldást,
-          megoldási tervet, folyamatot, csapattagot, referenciát, bizonyítékot.</p>
+        <p>Felejtsd el a száraz szabályokat és a feszengést! Nálam az élményszerű, gyakorlati tudáson van a hangsúly:
+        </p>
+        <ul>
+          <li><span class="vastagbetu">Személyre szabott órák:</span> Gyerekeknek, felnőtteknek, érettségire vagy
+            nyelvvizsgára készülőknek.</li>
+          <li><span class="vastagbetu">Rugalmas helyszín:</span> Személyesen Kerekdombon vagy kényelmesen online.</li>
+          <li><span class="vastagbetu">Kedvező díjszabás:</span> Mindössze 5 000 Ft / 60 perc az 5 nyelv bármelyikén.
+          </li>
+        </ul>
+        <br>
         <p class="actions"><a class="button button-primary" href="#contact">Érdekel! →</a><a
             class="button button-secondary" href="#contact">Árlista</a></p>
       </div>
     </section>
   </main>
   <footer id="contact">
-    <div class="footer-top"><img class="footer-logo"
-        src="assets/logo_vilagos.png" alt="Logo" />
-      <nav aria-label="Lábléc navigáció"><a href="#top">Főoldal</a><a href="arak.html">Szolgáltatások</a><a href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
+    <div class="footer-top"><img class="footer-logo" src="assets/logo_vilagos.png" alt="Logo" />
+      <nav aria-label="Lábléc navigáció"><a href="#top">Főoldal</a><a href="arak.html">Szolgáltatások</a><a
+          href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
       </nav>
-      <div class="socials"><a href="#facebook" aria-label="Facebook"><img
-            src="assets/facebook.png" alt="" /></a><a
-          href="#instagram" aria-label="Instagram"><img
-            src="assets/instagram.png" alt="" /></a><a
-          href="#youtube" aria-label="YouTube"><img
-            src="assets/youtube.png" alt="" /></a></div>
+      <div class="socials"><a href="https://www.facebook.com/profile.php?id=100085614274289" aria-label="Facebook"><img
+            src="assets/facebook.png" alt="" /></a></div>
     </div>
     <div class="legal"><span>© Polgár Rosemarie - Minden jog fenntartva!</span><a href="#privacy">Adatkezelési
         tájékoztató</a></div>
   </footer>
   <a class="booking-float" href="kapcsolat.html#foglalas">Időpontfoglalás <span>→</span></a>
+
+  <!-- SHOELACE PLAKÁT POPUP -->
+  <sl-dialog id="welcome-popup" no-header class="poster-popup">
+    <!-- Plakát / Kép helye -->
+    <div class="poster-container">
+      <img src="assets/plakat.png" alt="Hirdetés plakát" class="poster-image">
+    </div>
+  </sl-dialog>
+
 </body>
+
 </html>

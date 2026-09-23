@@ -711,3 +711,536 @@ footer {
         gap: 14px;
     }
 }
+
+/* Felülírja a bold elemek méretét és színét */
+.vastagbetu {
+    color: inherit !important;      /* Átveszi a szülő elem (normál szöveg) színét */
+    font-size: inherit !important;  /* Átveszi a normál szövegméretet */
+    font-weight: bold !important;   /* Megtartja a félkövér jelleget */
+}
+
+
+/* --- PRICING SECTION REDESIGN --- */
+.pricing {
+    padding-inline: max(24px, calc((100% - var(--max))/2));
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.pricing h1 {
+    margin: 0;
+    font: 600 42px/1.2 Fraunces, serif;
+    color: var(--ink);
+}
+
+.pricing-rule {
+    width: 100%;
+    max-width: 600px;
+    height: 2px;
+    margin: 20px 0;
+    background: var(--rose);
+    opacity: 0.3;
+}
+
+.pricing-intro {
+    max-width: 640px;
+    margin: 0 0 40px 0;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+}
+
+/* Price Grid & Cards */
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 32px;
+}
+
+.price-option {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.price-option:hover {
+    transform: translateY(-8px);
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(43, 40, 39, 0.08);
+}
+
+.price-option.featured {
+    border: 2px solid var(--rose);
+    background: #fffaf6;
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    margin-bottom: 8px;
+}
+
+.icon-wrapper img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.price-option h2 {
+    margin: 0;
+    font: 600 24px/1.2 Fraunces, serif;
+    color: var(--ink);
+}
+
+.price-option p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1; /* Alulra tolja az árat és a gombot */
+}
+
+.price-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0 6px 0;
+}
+
+.price-tag strong {
+    font: 600 32px/1 Fraunces, serif;
+    color: var(--rose) !important;
+}
+
+.price-tag span {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+}
+
+.price-option .button {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.price-option .button img {
+    width: 12px;
+    height: 12px;
+}
+
+/* GYIK / FAQ Stílusok */
+.faq {
+    background: var(--canvas);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.faq-list details {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #e2dad0;
+    overflow: hidden;
+}
+
+.faq summary {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none; /* Normál kis/nagybetű az olvashatóságért */
+}
+
+@media (max-width: 900px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- EGYETLEN ÁRKÁRTYA ELRENDEZÉS --- */
+
+.price-single-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.price-card-single {
+    width: 100%;
+    max-width: 680px;
+    background: var(--card);
+    border: 2px solid var(--rose);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card-single:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(43, 40, 39, 0.08);
+    background: #fffaf6;
+}
+
+.price-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.price-card-header h2 {
+    margin: 0;
+    font: 600 32px/1.2 Fraunces, serif;
+    color: var(--ink);
+}
+
+.price-card-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 24px 0;
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.price-features li {
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 28px;
+}
+
+.price-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--rose);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.price-card-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.price-card-footer .button {
+    padding: 16px 36px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .price-card-single {
+        padding: 24px;
+    }
+}
+
+/* --- GYIK / FAQ SZEKCIÓ MÓDOSÍTÁSOK --- */
+
+.faq {
+    background: var(--canvas); /* A főoldal harmonikus háttérszíne */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.faq-list {
+    background: transparent; /* Eltávolítja a háttér dobozát */
+}
+
+.faq details {
+    background: rgba(255, 255, 255, 0.4); /* Finom, félig áttetsző lágy háttér a fehér helyett */
+    border: 1px solid #e2dad0;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.faq details:hover {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: var(--rose);
+}
+
+.faq details[open] {
+    background: #ffffff; /* Nyitott állapotban tiszta, áttekinthető háttér */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: var(--rose);
+}
+
+.faq summary {
+    padding: 20px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    color: var(--ink);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: none; /* Normál kis- és nagybetűk a jobb olvashatóságért */
+    transition: color 0.2s ease;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::before {
+    content: "+";
+    flex: 0 0 20px;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--rose);
+    transition: transform 0.3s ease;
+}
+
+.faq details[open] summary::before {
+    content: "−";
+    transform: rotate(180deg);
+}
+
+/* Lágy animáció a kinyíló válasznak */
+.faq details p {
+    margin: 0;
+    padding: 0 24px 20px 24px;
+    border-top: 0;
+    color: #4a4746;
+    font-size: 15px;
+    line-height: 1.6;
+    animation: faqFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes faqFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- KÉTHASÁBOS ÁRAK SZEKCIÓ --- */
+
+.pricing-two-column {
+    display: grid;
+    grid-template-columns: 1fr 480px; /* Bal oldalon a szöveg, jobb oldalon a doboz */
+    gap: 60px;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.pricing-content {
+    max-width: 540px;
+}
+
+.pricing-content h1 {
+    margin: 0;
+    font: 600 42px/1.2 Fraunces, serif;
+    color: var(--ink);
+}
+
+.pricing-content .pricing-rule {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background: var(--rose);
+    opacity: 0.3;
+}
+
+.pricing-content .pricing-intro {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0;
+}
+
+/* Árkártya módosítása a jobb oldali hasábhoz */
+.price-card-single {
+    width: 100%;
+    background: var(--card);
+    border: 2px solid var(--rose);
+    border-radius: 20px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card-single:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(43, 40, 39, 0.08);
+    background: #fffaf6;
+}
+
+.price-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.price-card-header h2 {
+    margin: 0;
+    font: 600 28px/1.2 Fraunces, serif;
+    color: var(--ink);
+}
+
+.price-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-tag strong {
+    font: 600 32px/1 Fraunces, serif;
+    color: var(--rose) !important;
+}
+
+.price-tag span {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+}
+
+.price-card-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px 0;
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-features li {
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 24px;
+}
+
+.price-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--rose);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price-card-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.price-card-footer .button {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Mobilnézet beállítása */
+@media (max-width: 900px) {
+    .pricing-two-column {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-block: 48px;
+    }
+
+    .pricing-content {
+        max-width: 100%;
+    }
+}
+
+/* --- PLAKÁT POPUP STÍLUS --- */
+
+.poster-popup {
+    --width: auto;
+    --max-width: 90vw;
+}
+
+/* Shoelace belső ablak testreszabása */
+.poster-popup::part(panel) {
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    max-width: 600px; /* Szabályozhatod a plakát maximális szélességét */
+}
+
+.poster-popup::part(body) {
+    padding: 0;
+}
+
+.poster-container img.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Az X (close) gomb stílusa a plakát jobb felső sarkában */
+.poster-popup::part(close-button) {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s ease;
+}
+
+.poster-popup::part(close-button):hover {
+    background: #ffffff;
+}

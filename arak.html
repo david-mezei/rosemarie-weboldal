@@ -1,112 +1,140 @@
 <!doctype html>
 <html lang="hu">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Árak | Polgár Rosemarie</title>
+  <title>Árak & Szolgáltatások | Polgár Rosemarie</title>
   <link id="favicon" rel="icon" type="image/x-icon" href="assets/favicon_dark.ico">
   <script src="change_favicon.js"></script>
   <link rel="preconnect" href="https://fonts.bunny.net" />
-  <link
-  href="https://fonts.bunny.net/css?family=dm-sans:400,600,700|fraunces:600|montserrat:400,600"
-  rel="stylesheet" />
+  <link href="https://fonts.bunny.net/css?family=dm-sans:400,600,700|fraunces:600|montserrat:400,600"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header class="site-header"><a class="brand" href="index.html"><img
-        src="assets/logo.png"
-        alt="Rosemarie nyelvtanár" /></a>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Rosemarie nyelvtanár" />
+    </a>
     <nav aria-label="Fő navigáció">
       <details class="services-menu">
-        <summary>Szolgáltatások <img class="chevron"
-            src="assets/chevron-down.png" alt="" /></summary>
+        <summary>Szolgáltatások <img class="chevron" src="assets/chevron-down.png" alt="" /></summary>
         <div class="services-dropdown"><a href="arak.html">Árak</a></div>
-      </details><a href="index.html#about">Rólunk</a><a
-        href="kapcsolat.html">Kapcsolat</a>
+      </details>
+      <a href="index.html#about">Rólunk</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
     </nav>
   </header>
+
   <main>
-    <section class="pricing">
-      <p class="eyebrow">Alcím, ami segíti a címsorodat</p>
-      <h1>Válassz csomagot!</h1>
-      <div class="pricing-rule"></div>
-      <p class="pricing-intro">Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy
-        előnyöd, funkciód.</p>
-      <div class="price-grid">
-        <article class="price-option">
-          <div class="placeholder" aria-hidden="true"><img src="assets/chat.png"></div>
-          <h2>Startup</h2>
-          <p>Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy előnyöd,
-            funkciód.</p><strong>9.900 Ft</strong><a href="#contact">Kattints ide <img
-              src="assets/arrow-right.png" alt="" /></a>
-        </article>
-        <article class="price-option">
-          <div class="placeholder" aria-hidden="true"><img src="assets/chat.png"></div>
-          <h2>Cégeknek</h2>
-          <p>Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy előnyöd,
-            funkciód.</p><strong>19.900 Ft</strong><a href="#contact">Kattints ide <img
-              src="assets/arrow-right.png" alt="" /></a>
-        </article>
-        <article class="price-option">
-          <div class="placeholder" aria-hidden="true"><img src="assets/chat.png"></div>
-          <h2>Multiknak</h2>
-          <p>Mutasd be a problémát, amit megoldasz, emeld ki a célközönséget, bizonyítékaidat vagy egy előnyöd,
-            funkciód.</p><strong>29.900 Ft</strong><a href="#contact">Kattints ide <img
-              src="assets/arrow-right.png" alt="" /></a>
+    <!-- PRICING SECTION -->
+    <section class="pricing pricing-two-column">
+      <div class="pricing-content">
+        <p class="eyebrow">Átlátható & Kedvező Díjszabás</p>
+        <h1>Árak és Szolgáltatások</h1>
+        <div class="pricing-rule"></div>
+        <p class="pricing-intro">
+          Nálam nincsenek rejtett költségek vagy bonyolult csomagok. Bármelyik nyelvet és óratípust választod, egységes,
+          korrekt óradíjon tanulhatsz Kerekdombon vagy online.
+        </p>
+      </div>
+
+      <div class="pricing-card-wrapper">
+        <article class="price-card-single">
+          <div class="price-card-header">
+            <div class="icon-wrapper">
+              <img src="assets/chat.png" alt="Nyelvóra">
+            </div>
+            <h2>Nyelvóra</h2>
+            <div class="price-tag">
+              <strong>5 000 Ft</strong>
+              <span>/ 60 perc</span>
+            </div>
+          </div>
+
+          <div class="price-card-body">
+            <ul class="price-features">
+              <li><strong>5 választható nyelv:</strong> Angol, Német, Francia, Olasz és Spanyol</li>
+              <li><strong>Minden korosztálynak:</strong> Gyermekeknek (az első betűktől) és felnőtteknek</li>
+              <li><strong>Célirányos felkészítés:</strong> Általános nyelvtanulás, érettségi és nyelvvizsga-felkészítés
+              </li>
+              <li><strong>Rugalmas helyszín:</strong> Személyesen Kerekdombon vagy kényelmesen online</li>
+            </ul>
+          </div>
+
+          <div class="price-card-footer">
+            <a href="kapcsolat.html#foglalas" class="button button-primary">
+              Időpontot foglalok <img src="assets/arrow-right.png" alt="" />
+            </a>
+          </div>
         </article>
       </div>
     </section>
+
+    <!-- FAQ SECTION -->
     <section class="faq">
-      <h2>Gyakran ismételt kérdések</h2>
+      <h2>Gyakran Ismételt Kérdések</h2>
       <div class="faq-columns">
         <div class="faq-list">
           <details open>
-            <summary>Kérdés, ami felmerülhet az érdeklődőben?</summary>
-            <p>Válasz, ami eloszlat minden kételyt az érdeklődőben és arra ösztönzi, hogy megrendelje a terméket vagy
-              szolgáltatást.</p>
+            <summary>Hány éves kortól lehet kezdeni a nyelvtanulást?</summary>
+            <p>A gyermekekkel már akkor el tudjuk kezdeni a közös munkát, amint magabiztosan ismerik a betűket. Az órák
+              játékosak és korosztálynak megfelelő tempójúak.</p>
           </details>
           <details>
-            <summary>Kérdés, ami felmerülhet az érdeklődőben?</summary>
-            <p>Válasz, ami eloszlat minden kételyt az érdeklődőben és segít a döntésben.</p>
+            <summary>Hol zajlanak a nyelvórák?</summary>
+            <p>Személyesen Kerekdombon, vagy kényelmesen az otthonodból, online formában. Az online órák ugyanolyan
+              interaktívak és hatékonyak, mint a személyes találkozók.</p>
           </details>
           <details>
-            <summary>Kérdés, ami felmerülhet az érdeklődőben?</summary>
-            <p>Válasz, ami egyértelművé teszi a következő lépést.</p>
+            <summary>Milyen nyelvek közül választhatok?</summary>
+            <p>Angol, német, francia, olasz és spanyol nyelvek oktatását vállalom kezdő szinttől egészen a
+              nyelvvizsga-felkészítésig.</p>
           </details>
         </div>
+
         <div class="faq-list">
           <details open>
-            <summary>Kérdés, ami felmerülhet az érdeklődőben?</summary>
-            <p>Válasz, ami eloszlat minden kételyt az érdeklődőben és arra ösztönzi, hogy megrendelje a terméket vagy
-              szolgáltatást.</p>
+            <summary>Mennyibe kerül egy nyelvóra?</summary>
+            <p>Minden óratípus és nyelv esetében egységesen <strong>5 000 Ft</strong> egy 60 perces foglalkozás.
+              Nincsenek rejtett költségek.</p>
           </details>
           <details>
-            <summary>Kérdés, ami felmerülhet az érdeklődőben?</summary>
-            <p>Válasz, ami eloszlat minden kételyt az érdeklődőben és segít a döntésben.</p>
+            <summary>Vállal érettségi és nyelvvizsga felkészítést is?</summary>
+            <p>Igen! Különös hangsúlyt fektetek a vizsgafeladatok típusaira, az írásbeli és szóbeli készségek
+              fejlesztésére mind közép-, mind emelt szinten.</p>
           </details>
           <details>
-            <summary>Kérdés, ami felmerülhet az érdeklődőben?</summary>
-            <p>Válasz, ami egyértelművé teszi a következő lépést.</p>
+            <summary>Hogyan tudok időpontot foglalni?</summary>
+            <p>Kattints a „Kapcsolat” vagy „Időpontfoglalás” gombra, és írj üzenetet a kiválasztott nyelvvel és az
+              preferált időpontjaiddal!</p>
           </details>
         </div>
       </div>
     </section>
   </main>
+
   <footer id="contact">
-    <div class="footer-top"><img class="footer-logo"
-        src="assets/logo_vilagos.png" alt="Logo" />
-      <nav aria-label="Lábléc navigáció"><a href="#top">Főoldal</a><a href="arak.html">Szolgáltatások</a><a href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
+    <div class="footer-top">
+      <img class="footer-logo" src="assets/logo_vilagos.png" alt="Logo" />
+      <nav aria-label="Lábléc navigáció">
+        <a href="index.html">Főoldal</a>
+        <a href="arak.html">Szolgáltatások</a>
+        <a href="index.html#about">Rólunk</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
       </nav>
-      <div class="socials"><a href="#facebook" aria-label="Facebook"><img
-            src="assets/facebook.png" alt="" /></a><a
-          href="#instagram" aria-label="Instagram"><img
-            src="assets/instagram.png" alt="" /></a><a
-          href="#youtube" aria-label="YouTube"><img
-            src="assets/youtube.png" alt="" /></a></div>
+      <div class="socials"><a href="https://www.facebook.com/profile.php?id=100085614274289" aria-label="Facebook"><img
+            src="assets/facebook.png" alt="" /></a></div>
     </div>
-    <div class="legal"><span>© Polgár Rosemarie - Minden jog fenntartva!</span><a href="#privacy">Adatkezelési
-        tájékoztató</a></div>
+    <div class="legal">
+      <span>© Polgár Rosemarie - Minden jog fenntartva!</span>
+      <a href="#privacy">Adatkezelési tájékoztató</a>
+    </div>
   </footer>
+
   <a class="booking-float" href="kapcsolat.html#foglalas">Időpontfoglalás <span>→</span></a>
 </body>
+
 </html>
