@@ -89,49 +89,6 @@ a {
     font-size: 16px;
 }
 
-.chevron {
-    width: 24px;
-    height: 24px;
-}
-
-.services-menu {
-    position: relative;
-}
-
-.services-menu summary {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 16px;
-    list-style: none;
-}
-
-.services-menu summary::-webkit-details-marker {
-    display: none;
-}
-
-.services-dropdown {
-    position: absolute;
-    z-index: 5;
-    top: calc(100% + 14px);
-    right: 0;
-    min-width: 150px;
-    padding: 8px;
-    background: #fff;
-    box-shadow: 8px 16px 40px #0000001f;
-}
-
-.services-dropdown a {
-    display: block;
-    padding: 8px 12px;
-    white-space: nowrap;
-}
-
-.services-dropdown a:hover,
-.services-dropdown a:focus-visible {
-    background: var(--canvas);
-}
-
 .intro,
 .reasons,
 .callout,
@@ -348,9 +305,6 @@ footer {
         font-size: 13px;
     }
 
-    .site-header nav a:nth-child(n+3) {
-        display: none;
-    }
 
     .intro {
         grid-template-columns: 1fr;
@@ -423,13 +377,7 @@ footer {
         font-size: 12px;
     }
 
-    .site-header nav a:first-child {
-        font-size: 0;
-    }
 
-    .chevron {
-        width: 20px;
-    }
 
     .actions {
         flex-wrap: wrap;
@@ -610,9 +558,9 @@ footer {
 }
 
 .contact-page {
-    min-height: 309px;
+    min-height: 450px;
     display: grid;
-    grid-template-columns: 1fr 398px;
+    grid-template-columns: minmax(0, 1fr) minmax(500px, 600px);
     gap: 80px;
     align-items: center;
     padding: max(48px, 5.5vw) max(24px, calc((100% - var(--max))/2));
@@ -648,31 +596,11 @@ footer {
 
 .map iframe {
     border: 0;
+    display: block;
+    width: 100%;
+    height: 450px;
 }
 
-.map-pin {
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-items: center;
-    align-self: center;
-    border-radius: 50%;
-    background: var(--rose);
-    box-shadow: 0 8px 18px #a85d7233;
-}
-
-.map-pin img {
-    width: 18px;
-    height: 18px;
-    filter: brightness(0) invert(1);
-}
-
-.map-copy {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    color: var(--ink);
-}
 
 .map-copy strong {
     font: 600 20px/1.2 Fraunces, serif;
@@ -1318,41 +1246,16 @@ img, iframe, video, svg { max-width: 100%; }
         display: flex;
     }
 
-    .site-header nav > a,
-    .services-menu summary {
+    .site-header nav > a{
         min-height: 46px;
         padding: 10px 12px;
         border-radius: 9px;
         font-size: 15px;
     }
 
-    .site-header nav > a:hover,
-    .services-menu summary:hover {
+    .site-header nav > a:hover {
         background: var(--canvas);
     }
-
-    .services-menu {
-        width: 100%;
-    }
-
-    .services-menu summary {
-        justify-content: space-between;
-    }
-
-    .services-dropdown {
-        position: static;
-        min-width: 0;
-        padding: 0 0 6px 12px;
-        background: transparent;
-        box-shadow: none;
-    }
-
-    .services-dropdown a {
-        padding: 9px 12px;
-        white-space: normal;
-        font-size: 14px;
-    }
-
     .intro,
     .reasons,
     .callout,
@@ -1656,4 +1559,18 @@ img, iframe, video, svg { max-width: 100%; }
     .brand img { width: 120px; }
     .mobile-menu-toggle { width: 40px; height: 40px; }
     .intro h1, .reasons h2, .callout h2, .pricing h1, .pricing-content h1, .faq h2, .contact-copy h1 { font-size: 28px; }
+}
+
+.site-header nav > a[aria-current="page"] {
+    color: var(--rose);
+    font-weight: 600;
+}
+
+
+.site-header nav a:focus-visible,
+.button:focus-visible,
+.booking-float:focus-visible,
+.socials a:focus-visible {
+    outline: 3px solid var(--rose);
+    outline-offset: 3px;
 }

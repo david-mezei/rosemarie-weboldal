@@ -22,10 +22,9 @@
 <body>
   <header class="site-header"><a class="brand" href="#top"><img src="assets/logo.png" alt="Rosemarie nyelvtanár" /></a>
     <nav id="main-navigation" aria-label="Fő navigáció">
-      <details class="services-menu">
-        <summary>Szolgáltatások <img class="chevron" src="assets/chevron-down.png" alt="Chevron Down" /></summary>
-        <div class="services-dropdown"><a href="arak.html">Árak</a></div>
-      </details><a href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
+      <a href="arak.html">Árak</a>
+      <a href="#about" aria-current="page">Rólunk</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
     </nav>
     <button class="mobile-menu-toggle" type="button" aria-label="Menü megnyitása" aria-expanded="false"
       aria-controls="main-navigation">
@@ -41,7 +40,7 @@
         <div class="rule"></div>
         <p>A nyelvtanulás számomra az új lehetőségek felfedezéséről szól. Szeretném, hogy tanítványaim örömmel
           tanuljanak, merjenek megszólalni, és a megszerzett tudást valóban használni is tudják.</p>
-        <a class="button button-primary" href="#services">Ismerj meg jobban!</a>
+        <a class="button button-primary" href="#rolam">Ismerj meg jobban!</a>
       </div>
     </section>
     <section class="reasons" id="services">
@@ -50,24 +49,24 @@
         <article class="card"><span>01.</span>
           <h3>Sokéves nemzetközi és többnyelvű tapasztalat</h3>
           <p>Svájci-horvát-magyar állampolgárként, első kézből adom át az életszerű, mindennapi nyelvhasználathoz
-            szükséges hasznos tudást. </p><a href="#contact">Kattints ide <img src="assets/arrow-right.png"
+            szükséges hasznos tudást. </p><a href="kapcsolat.html#foglalas">Kattints ide <img src="assets/arrow-right.png"
               alt="" /></a>
         </article>
         <article class="card"><span>02.</span>
           <h3>Minden korosztálynak: az első betűktől, az érettségiig</h3>
           <p>Gyermekeknek (amint ismerik a betűket) és felnőtteknek egyaránt vállalok oktatást, valamint célirányos
-            felkészítést érettségire és nyelvvizsgára is. </p><a href="#contact">Kattints ide <img
+            felkészítést érettségire és nyelvvizsgára is. </p><a href="kapcsolat.html#foglalas">Kattints ide <img
               src="assets/arrow-right.png" alt="" /></a>
         </article>
         <article class="card"><span>03.</span>
           <h3>Személyesen vagy online? Te döntöd el!</h3>
-          <p>Tanulj tetszőlegesen Kerekdombon vagy online! </p><a href="#contact">Kattints ide <img
+          <p>Tanulj tetszőlegesen Kerekdombon vagy online! </p><a href="kapcsolat.html#foglalas">Kattints ide <img
               src="assets/arrow-right.png" alt="" /></a>
         </article>
         <article class="card"><span>04.</span>
           <h3>Öt világnyelv közül választhatsz - egy helyen.</h3>
           <p>5 népszerű nyelv <span class="vastagbetu">(angol, német, francia, olasz, spanyol)</span> közül választhatsz
-            a céljaidnak megfelelően.</p><a href="#contact">Kattints ide <img src="assets/arrow-right.png" alt="" /></a>
+            a céljaidnak megfelelően.</p><a href="kapcsolat.html#foglalas">Kattints ide <img src="assets/arrow-right.png" alt="" /></a>
         </article>
       </div>
     </section>
@@ -85,20 +84,24 @@
         </ul>
         <br>
         <p class="actions"><a class="button button-primary" href="#contact">Érdekel! →</a><a
-            class="button button-secondary" href="#contact">Árlista</a></p>
+            class="button button-secondary" href="arak.html">Árlista</a></p>
       </div>
     </section>
   </main>
   <footer id="contact">
     <div class="footer-top"><img class="footer-logo" src="assets/logo_vilagos.png" alt="Logo" />
-      <nav aria-label="Lábléc navigáció"><a href="#top">Főoldal</a><a href="arak.html">Szolgáltatások</a><a
-          href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
+      <nav aria-label="Lábléc navigáció">
+        <a href="index.html">Főoldal</a>
+        <a href="arak.html">Árak</a>
+        <a href="index.html#about">Rólunk</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
       </nav>
       <div class="socials"><a href="https://www.facebook.com/profile.php?id=100085614274289" aria-label="Facebook"><img
             src="assets/facebook.png" alt="" /></a></div>
     </div>
-    <div class="legal"><span>© Polgár Rosemarie - Minden jog fenntartva!</span><a href="#privacy">Adatkezelési
-        tájékoztató</a></div>
+    <div class="legal"><span>© Polgár Rosemarie - Minden jog fenntartva!</span>
+      <a href="#privacy" id="adatkez">Adatkezelési tájékoztató</a>
+    </div>
   </footer>
   <a class="booking-float" href="kapcsolat.html#foglalas">Időpontfoglalás <span>→</span></a>
 

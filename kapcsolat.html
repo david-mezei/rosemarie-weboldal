@@ -17,12 +17,12 @@
   <header class="site-header"><a class="brand" href="index.html"><img src="assets/logo.png"
         alt="Rosemarie nyelvtanár" /></a>
     <nav id="main-navigation" aria-label="Fő navigáció">
-      <details class="services-menu">
-        <summary>Szolgáltatások <img class="chevron" src="assets/chevron-down.png" alt="" /></summary>
-        <div class="services-dropdown"><a href="arak.html">Árak</a></div>
-      </details><a href="index.html#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
+      <a href="arak.html">Árak</a>
+      <a href="index.html#about">Rólunk</a>
+      <a href="kapcsolat.html" aria-current="page">Kapcsolat</a>
     </nav>
-    <button class="mobile-menu-toggle" type="button" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="main-navigation">
+    <button class="mobile-menu-toggle" type="button" aria-label="Menü megnyitása" aria-expanded="false"
+      aria-controls="main-navigation">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -66,17 +66,26 @@
       </form>
     </section>
   </main>
-  <footer>
-    <div class="footer-top"><img class="footer-logo" src="assets/logo_vilagos.png" alt="Logo" />
-      <nav aria-label="Lábléc navigáció"><a href="#top">Főoldal</a><a href="arak.html">Szolgáltatások</a><a
-          href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
+
+  <footer id="contact">
+    <div class="footer-top">
+      <img class="footer-logo" src="assets/logo_vilagos.png" alt="Logo" />
+      <nav aria-label="Lábléc navigáció">
+        <a href="index.html">Főoldal</a>
+        <a href="arak.html">Árak</a>
+        <a href="index.html#about">Rólunk</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
       </nav>
       <div class="socials"><a href="https://www.facebook.com/profile.php?id=100085614274289" aria-label="Facebook"><img
             src="assets/facebook.png" alt="" /></a></div>
-
-      <div class="legal"><span>© Polgár Rosemarie - Minden jog fenntartva!</span><a href="#privacy">Adatkezelési
-          tájékoztató</a></div>
+    </div>
+    <div class="legal">
+      <span>© Polgár Rosemarie - Minden jog fenntartva!</span>
+      <a href="#privacy">Adatkezelési tájékoztató</a>
+    </div>
   </footer>
+
+
   <a class="booking-float" href="#foglalas">Időpontfoglalás <span>→</span></a>
   <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title" hidden>
     <div class="success-modal__backdrop" data-close-modal></div>
