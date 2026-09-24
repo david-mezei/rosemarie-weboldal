@@ -21,16 +21,20 @@
 
 <body>
   <header class="site-header"><a class="brand" href="#top"><img src="assets/logo.png" alt="Rosemarie nyelvtanár" /></a>
-    <nav aria-label="Fő navigáció">
+    <nav id="main-navigation" aria-label="Fő navigáció">
       <details class="services-menu">
         <summary>Szolgáltatások <img class="chevron" src="assets/chevron-down.png" alt="Chevron Down" /></summary>
         <div class="services-dropdown"><a href="arak.html">Árak</a></div>
       </details><a href="#about">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
     </nav>
+    <button class="mobile-menu-toggle" type="button" aria-label="Menü megnyitása" aria-expanded="false"
+      aria-controls="main-navigation">
+      <span></span><span></span><span></span>
+    </button>
   </header>
   <main id="top">
     <section class="intro" id="about">
-      <img class="portrait" src="assets/Rosemarie.jpg" alt="600x400" />
+      <img class="portrait" src="assets/Rosemarie.jpg" alt="Polgár Rosemarie" />
       <div class="intro-copy">
         <p class="eyebrow">Üdvözöllek honlapomon!</p>
         <h1>Polgár Rosemarie vagyok, nyelvtanár</h1>
@@ -106,6 +110,7 @@
     </div>
   </sl-dialog>
 
+  <script src="responsive.js"></script>
 </body>
 
 </html>

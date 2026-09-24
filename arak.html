@@ -18,7 +18,7 @@
     <a class="brand" href="index.html">
       <img src="assets/logo.png" alt="Rosemarie nyelvtanár" />
     </a>
-    <nav aria-label="Fő navigáció">
+    <nav id="main-navigation" aria-label="Fő navigáció">
       <details class="services-menu">
         <summary>Szolgáltatások <img class="chevron" src="assets/chevron-down.png" alt="" /></summary>
         <div class="services-dropdown"><a href="arak.html">Árak</a></div>
@@ -26,6 +26,9 @@
       <a href="index.html#about">Rólunk</a>
       <a href="kapcsolat.html">Kapcsolat</a>
     </nav>
+    <button class="mobile-menu-toggle" type="button" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="main-navigation">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main>
@@ -135,6 +138,7 @@
   </footer>
 
   <a class="booking-float" href="kapcsolat.html#foglalas">Időpontfoglalás <span>→</span></a>
+  <script src="responsive.js"></script>
 </body>
 
 </html>
