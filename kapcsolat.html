@@ -25,7 +25,7 @@
 
 
   <!-- Structured Data / JSON-LD -->
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -88,14 +88,36 @@
         <h2>Foglalj egy első konzultációt</h2>
         <p>Írd meg, milyen nyelvi célon dolgoznál, és hamarosan felveszem veled a kapcsolatot.</p>
       </div>
-      <form class="booking-form" id="booking-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="d624de3e-a6a0-40e5-a455-f0d0ce981923" />
-        <input type="hidden" name="subject" value="Új megkeresés a weboldalon keresztül" />
-        <input type="hidden" name="from_name" value="Polgár Rosemarie weboldal" />
-        <label>Név<input name="name" required autocomplete="name" /></label><label>E-mail<input type="email"
-            name="email" required autocomplete="email" /></label><label class="form-wide">Miben segíthetek?<textarea
-            name="message" rows="3" required></textarea></label><button class="button button-primary"
-          type="submit">Üzenet küldése →</button>
+      <form class="booking-form" id="booking-form" action="https://formhook.app/f/fh_bFcQQPnG4DifmpaPtHu06Tohh4IxIBXe"
+        method="POST">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden />
+        <input type="hidden" name="_redirect" value="https://david-mezei.github.io/rosemarie-weboldal/thank_you.html" />
+        <label>
+          Név
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+
+        <label>
+          E-mail
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+
+        <label class="form-wide">
+          Miben segíthetek?
+          <textarea name="message" rows="3" required></textarea>
+        </label>
+
+        <label class="form-consent">
+          <input type="checkbox" name="privacy_consent" value="accepted" required>
+          <span>
+            Elolvastam és elfogadom az
+            <a href="adatvedelem.html">Adatkezelési tájékoztatót</a>.
+          </span>
+        </label>
+
+        <button class="button button-primary" type="submit">
+          Üzenet küldése →
+        </button>
       </form>
     </section>
   </main>
@@ -120,17 +142,7 @@
 
 
   <a class="booking-float" href="#foglalas">Időpontfoglalás <span>→</span></a>
-  <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title" hidden>
-    <div class="success-modal__backdrop" data-close-modal></div>
-    <div class="success-modal__content"><button class="success-modal__close" type="button" aria-label="Bezárás"
-        data-close-modal>×</button>
-      <p class="eyebrow">Köszönöm!</p>
-      <h2 id="success-title">Megérkezett az üzeneted.</h2>
-      <p>Hamarosan felveszem veled a kapcsolatot.</p><button class="button button-primary" type="button"
-        data-close-modal>Rendben</button>
-    </div>
   </div>
-  <script src="send_email.js"></script>
   <script src="responsive.js"></script>
 </body>
 

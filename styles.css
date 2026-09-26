@@ -7,30 +7,254 @@
 }
 
 /* Contemporary editorial polish */
-.intro { background: radial-gradient(circle at 8% 15%, #f5f0e9 0, transparent 28%), #fff; }
-.intro-copy, .portrait, .card, .price-option, .faq-list, .contact-copy, .map { animation: rise-in .7s both; }
-.portrait { box-shadow: 18px 20px 0 #f5f0e9; }
-.card { transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
-.card:hover { transform: translateY(-8px); background: #fffaf6; box-shadow: 0 20px 45px #2b282714; }
-.button, .booking-float { transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
-.button:hover, .booking-float:hover { transform: translateY(-2px); box-shadow: 0 12px 25px #a85d7240; }
-.site-header nav > a:hover, .footer-top a:hover { color: var(--rose); }
-.booking-float { position: fixed; z-index: 20; right: 24px; bottom: 24px; display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 999px; background: var(--rose); color: #fff; box-shadow: 0 14px 30px #a85d7250; font-size: 13px; font-weight: 700; letter-spacing: .312px; text-transform: uppercase; }
-.booking-float span { font-size: 18px; line-height: 1; }
-.booking-section { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 80px max(24px, calc((100% - var(--max))/2)); background: var(--canvas); }
-.booking-section h2 { margin: 0 0 20px; font: 600 40px/1.2 Fraunces, serif; }
-.booking-section > div > p:last-child { max-width: 500px; }
-.booking-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: start; }
-.booking-form label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .2px; }
-.booking-form input, .booking-form textarea { width: 100%; border: 1px solid #dfd7cf; border-radius: 8px; padding: 12px; background: #fff; color: var(--ink); font: 400 16px/1.5 "DM Sans", sans-serif; }
-.booking-form input:focus, .booking-form textarea:focus { outline: 2px solid #a85d7270; border-color: var(--rose); }
-.form-wide { grid-column: 1 / -1; }
-.booking-form button { justify-self: start; border: 0; cursor: pointer; }
-@keyframes rise-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
-@media (max-width: 800px) { .booking-section { grid-template-columns: 1fr; gap: 32px; padding-block: 48px; }.booking-section h2 { font-size: 34px; }.booking-float { right: 16px; bottom: 16px; }.booking-form { grid-template-columns: 1fr; }.form-wide { grid-column: auto; } }
-.booking-form button:disabled { cursor:wait; opacity:.7; transform:none; box-shadow:none; }
-.success-modal[hidden] { display:none; }.success-modal { position:fixed; z-index:100; inset:0; display:grid; place-items:center; padding:24px; }.success-modal__backdrop { position:absolute; inset:0; background:#2b282780; backdrop-filter:blur(5px); }.success-modal__content { position:relative; width:min(100%,480px); padding:48px; border-radius:20px; background:#fff; box-shadow:0 30px 80px #00000030; animation:modal-in .25s ease both; }.success-modal__content h2 { margin:0 0 16px; font:600 36px/1.2 Fraunces,serif; }.success-modal__content p:not(.eyebrow) { margin:0 0 28px; }.success-modal__close { position:absolute; top:16px; right:18px; border:0; background:transparent; color:var(--ink); font-size:30px; cursor:pointer; }@keyframes modal-in { from { opacity:0; transform:translateY(12px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+.intro {
+    background: radial-gradient(circle at 8% 15%, #f5f0e9 0, transparent 28%), #fff;
+}
+
+.intro-copy,
+.portrait,
+.card,
+.price-option,
+.faq-list,
+.contact-copy,
+.map {
+    animation: rise-in .7s both;
+}
+
+.portrait {
+    box-shadow: 18px 20px 0 #f5f0e9;
+}
+
+.card {
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #fffaf6;
+    box-shadow: 0 20px 45px #2b282714;
+}
+
+.button,
+.booking-float {
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.button:hover,
+.booking-float:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px #a85d7240;
+}
+
+.site-header nav>a:hover,
+.footer-top a:hover {
+    color: var(--rose);
+}
+
+.booking-float {
+    position: fixed;
+    z-index: 20;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: 999px;
+    background: var(--rose);
+    color: #fff;
+    box-shadow: 0 14px 30px #a85d7250;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .312px;
+    text-transform: uppercase;
+}
+
+.booking-float span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.booking-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 80px max(24px, calc((100% - var(--max))/2));
+    background: var(--canvas);
+}
+
+.booking-section h2 {
+    margin: 0 0 20px;
+    font: 600 40px/1.2 Fraunces, serif;
+}
+
+.booking-section>div>p:last-child {
+    max-width: 500px;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-content: start;
+}
+
+.booking-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+}
+
+.booking-form input:not([type="checkbox"]),
+.booking-form textarea {
+    width: 100%;
+    border: 1px solid #dfd7cf;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fff;
+    color: var(--ink);
+    font: 400 16px/1.5 "DM Sans", sans-serif;
+}
+
+.booking-form input:not([type="checkbox"]):focus,
+.booking-form textarea:focus {
+    outline: 2px solid #a85d7270;
+    border-color: var(--rose);
+}
+
+.form-wide {
+    grid-column: 1 / -1;
+}
+
+.booking-form button {
+    justify-self: start;
+    border: 0;
+    cursor: pointer;
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: auto;
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .booking-section {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-block: 48px;
+    }
+
+    .booking-section h2 {
+        font-size: 34px;
+    }
+
+    .booking-float {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-wide {
+        grid-column: auto;
+    }
+}
+
+.booking-form button:disabled {
+    cursor: wait;
+    opacity: .7;
+    transform: none;
+    box-shadow: none;
+}
+
+.success-modal[hidden] {
+    display: none;
+}
+
+.success-modal {
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.success-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: #2b282780;
+    backdrop-filter: blur(5px);
+}
+
+.success-modal__content {
+    position: relative;
+    width: min(100%, 480px);
+    padding: 48px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 30px 80px #00000030;
+    animation: modal-in .25s ease both;
+}
+
+.success-modal__content h2 {
+    margin: 0 0 16px;
+    font: 600 36px/1.2 Fraunces, serif;
+}
+
+.success-modal__content p:not(.eyebrow) {
+    margin: 0 0 28px;
+}
+
+.success-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -50,7 +274,9 @@ body {
     font: 400 16px/1.6 "DM Sans", sans-serif;
 }
 
-main { flex: 1; }
+main {
+    flex: 1;
+}
 
 a {
     color: inherit;
@@ -606,7 +832,9 @@ footer {
     font: 600 20px/1.2 Fraunces, serif;
 }
 
-.map-copy span { font-size: 13px; }
+.map-copy span {
+    font-size: 13px;
+}
 
 .map-copy em {
     margin-top: 8px;
@@ -642,9 +870,12 @@ footer {
 
 /* Felülírja a bold elemek méretét és színét */
 .vastagbetu {
-    color: inherit !important;      /* Átveszi a szülő elem (normál szöveg) színét */
-    font-size: inherit !important;  /* Átveszi a normál szövegméretet */
-    font-weight: bold !important;   /* Megtartja a félkövér jelleget */
+    color: inherit !important;
+    /* Átveszi a szülő elem (normál szöveg) színét */
+    font-size: inherit !important;
+    /* Átveszi a normál szövegméretet */
+    font-weight: bold !important;
+    /* Megtartja a félkövér jelleget */
 }
 
 
@@ -718,7 +949,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
     margin-bottom: 8px;
 }
 
@@ -739,7 +970,8 @@ footer {
     font-size: 15px;
     color: #555;
     line-height: 1.5;
-    flex-grow: 1; /* Alulra tolja az árat és a gombot */
+    flex-grow: 1;
+    /* Alulra tolja az árat és a gombot */
 }
 
 .price-tag {
@@ -793,7 +1025,8 @@ footer {
 .faq summary {
     font-size: 16px;
     font-weight: 600;
-    text-transform: none; /* Normál kis/nagybetű az olvashatóságért */
+    text-transform: none;
+    /* Normál kis/nagybetű az olvashatóságért */
 }
 
 @media (max-width: 900px) {
@@ -898,17 +1131,20 @@ footer {
 /* --- GYIK / FAQ SZEKCIÓ MÓDOSÍTÁSOK --- */
 
 .faq {
-    background: var(--canvas); /* A főoldal harmonikus háttérszíne */
+    background: var(--canvas);
+    /* A főoldal harmonikus háttérszíne */
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
 .faq-list {
-    background: transparent; /* Eltávolítja a háttér dobozát */
+    background: transparent;
+    /* Eltávolítja a háttér dobozát */
 }
 
 .faq details {
-    background: rgba(255, 255, 255, 0.4); /* Finom, félig áttetsző lágy háttér a fehér helyett */
+    background: rgba(255, 255, 255, 0.4);
+    /* Finom, félig áttetsző lágy háttér a fehér helyett */
     border: 1px solid #e2dad0;
     border-radius: 12px;
     margin-bottom: 12px;
@@ -922,7 +1158,8 @@ footer {
 }
 
 .faq details[open] {
-    background: #ffffff; /* Nyitott állapotban tiszta, áttekinthető háttér */
+    background: #ffffff;
+    /* Nyitott állapotban tiszta, áttekinthető háttér */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     border-color: var(--rose);
 }
@@ -938,7 +1175,8 @@ footer {
     font-size: 17px;
     font-weight: 600;
     line-height: 1.4;
-    text-transform: none; /* Normál kis- és nagybetűk a jobb olvashatóságért */
+    text-transform: none;
+    /* Normál kis- és nagybetűk a jobb olvashatóságért */
     transition: color 0.2s ease;
 }
 
@@ -976,6 +1214,7 @@ footer {
         opacity: 0;
         transform: translateY(-8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -986,7 +1225,8 @@ footer {
 
 .pricing-two-column {
     display: grid;
-    grid-template-columns: 1fr 480px; /* Bal oldalon a szöveg, jobb oldalon a doboz */
+    grid-template-columns: 1fr 480px;
+    /* Bal oldalon a szöveg, jobb oldalon a doboz */
     gap: 60px;
     align-items: center;
     padding-top: 80px;
@@ -1142,7 +1382,8 @@ footer {
     overflow: hidden;
     padding: 0;
     position: relative;
-    max-width: 600px; /* Szabályozhatod a plakát maximális szélességét */
+    max-width: 600px;
+    /* Szabályozhatod a plakát maximális szélességét */
 }
 
 .poster-popup::part(body) {
@@ -1165,13 +1406,14 @@ footer {
     background: rgba(255, 255, 255, 0.85);
     border-radius: 50%;
     padding: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.2s ease;
 }
 
 .poster-popup::part(close-button):hover {
     background: #ffffff;
 }
+
 /* =========================================================
    RESPONSIVE LAYOUT — keeps the desktop design, adapts all pages
    ========================================================= */
@@ -1200,15 +1442,30 @@ footer {
     transition: transform .2s ease, opacity .2s ease;
 }
 
-.site-header.menu-open .mobile-menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.site-header.menu-open .mobile-menu-toggle span:nth-child(2) { opacity: 0; }
-.site-header.menu-open .mobile-menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.site-header.menu-open .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.site-header.menu-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.site-header.menu-open .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
 
 /* Prevent long content from creating accidental horizontal scrolling. */
-img, iframe, video, svg { max-width: 100%; }
+img,
+iframe,
+video,
+svg {
+    max-width: 100%;
+}
 
 @media (max-width: 900px) {
-    :root { --mobile-gutter: 20px; }
+    :root {
+        --mobile-gutter: 20px;
+    }
 
     .site-header {
         position: relative;
@@ -1246,16 +1503,17 @@ img, iframe, video, svg { max-width: 100%; }
         display: flex;
     }
 
-    .site-header nav > a{
+    .site-header nav>a {
         min-height: 46px;
         padding: 10px 12px;
         border-radius: 9px;
         font-size: 15px;
     }
 
-    .site-header nav > a:hover {
+    .site-header nav>a:hover {
         background: var(--canvas);
     }
+
     .intro,
     .reasons,
     .callout,
@@ -1556,12 +1814,27 @@ img, iframe, video, svg { max-width: 100%; }
 }
 
 @media (max-width: 380px) {
-    .brand img { width: 120px; }
-    .mobile-menu-toggle { width: 40px; height: 40px; }
-    .intro h1, .reasons h2, .callout h2, .pricing h1, .pricing-content h1, .faq h2, .contact-copy h1 { font-size: 28px; }
+    .brand img {
+        width: 120px;
+    }
+
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .intro h1,
+    .reasons h2,
+    .callout h2,
+    .pricing h1,
+    .pricing-content h1,
+    .faq h2,
+    .contact-copy h1 {
+        font-size: 28px;
+    }
 }
 
-.site-header nav > a[aria-current="page"] {
+.site-header nav>a[aria-current="page"] {
     color: var(--rose);
     font-weight: 600;
 }
@@ -1573,4 +1846,160 @@ img, iframe, video, svg { max-width: 100%; }
 .socials a:focus-visible {
     outline: 3px solid var(--rose);
     outline-offset: 3px;
+}
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 8px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #6f665f;
+}
+
+.form-consent input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    flex: 0 0 17px;
+    width: 17px;
+    height: 17px;
+
+    margin: 2px 0 0;
+    padding: 0;
+
+    border: 1px solid #cfc5bd;
+    border-radius: 4px;
+    background: #fff;
+
+    cursor: pointer;
+    position: relative;
+}
+
+.form-consent input[type="checkbox"]:checked {
+    background: var(--rose);
+    border-color: var(--rose);
+}
+
+.form-consent input[type="checkbox"]:checked::after {
+    content: "✓";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -52%);
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-consent input[type="checkbox"]:focus-visible {
+    outline: 2px solid #a85d7270;
+    outline-offset: 2px;
+}
+
+.form-consent span {
+    flex: 1;
+    margin: 0;
+}
+
+.form-consent a {
+    color: var(--rose);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.booking-form .form-consent {
+    display: flex;
+    width: 100%;
+}
+
+
+.form-consent {
+    grid-column: 1 / -1;
+}
+
+
+
+.form-consent {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #81766e;
+}
+
+.form-consent input[type="checkbox"] {
+    flex: 0 0 16px;
+    width: 16px !important;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.form-consent span {
+    display: inline;
+    flex: 1;
+    margin: 0;
+}
+
+/* Thank you page */
+
+.thank-you-page {
+    position: relative;
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+}
+
+.success-modal--visible {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-modal--visible .success-modal__backdrop {
+    display: none;
+}
+
+.success-modal--visible .success-modal__content {
+    width: min(100%, 520px);
+    padding: 48px 40px;
+    background: #fff;
+    border: 1px solid #eee5df;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(40, 32, 28, 0.10);
+}
+
+.success-modal__content h1 {
+    margin: 10px 0 14px;
+}
+
+.success-modal__content p:not(.eyebrow) {
+    margin: 0 auto 28px;
+    max-width: 400px;
+    color: #81766e;
+    line-height: 1.6;
 }
