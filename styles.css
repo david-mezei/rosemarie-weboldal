@@ -23,7 +23,10 @@
 
 .portrait {
     box-shadow: 18px 20px 0 #f5f0e9;
+    object-fit: cover;
+    object-position: center 0%;
 }
+
 
 .card {
     transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
@@ -2002,4 +2005,140 @@ svg {
     max-width: 400px;
     color: #81766e;
     line-height: 1.6;
+}
+
+/* --- ROSEMARIE TÖRTÉNETE + HÁROM ZÁSZLÓ --- */
+
+.story-section {
+    padding: 90px max(24px, calc((100% - var(--max))/2));
+    background: var(--canvas);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 80px;
+    align-items: center;
+}
+
+.story-text {
+    max-width: 650px;
+}
+
+.story-text h2 {
+    margin: 0;
+    font: 600 40px/1.2 Fraunces, serif;
+}
+
+.story-text .rule {
+    margin: 24px 0;
+}
+
+.story-text p:not(.eyebrow) {
+    margin: 0 0 20px;
+}
+
+.flags-card {
+    padding: 40px 32px;
+    background: #fff;
+    border: 1px solid #e5dcd5;
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(43, 40, 39, 0.07);
+}
+
+.flags-title {
+    margin: 0 0 30px;
+    text-align: center;
+    font: 600 28px/1.2 Fraunces, serif;
+}
+
+.flags {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.flag-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.flag-item img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 5px 14px rgba(43, 40, 39, 0.14);
+}
+
+.flag-item:first-child img {
+    object-fit: contain;
+    background: #da291c;
+}
+
+.flag-item span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.flags-caption {
+    margin: 30px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid #eee5df;
+    color: #6f665f;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .story-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-text {
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .story-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .story-text h2 {
+        font-size: 30px;
+    }
+
+    .flags-card {
+        padding: 30px 20px;
+    }
+
+    .flags {
+        gap: 10px;
+    }
+
+    .flag-item img {
+        width: 72px;
+        height: 48px;
+    }
+
+    .flag-item span {
+        font-size: 12px;
+    }
+
+    .flags-caption {
+        font-size: 13px;
+    }
 }
