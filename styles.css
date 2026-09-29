@@ -23,8 +23,6 @@
 
 .portrait {
     box-shadow: 18px 20px 0 #f5f0e9;
-    object-fit: cover;
-    object-position: center 0%;
 }
 
 
@@ -336,9 +334,7 @@ footer {
 
 .portrait {
     width: 100%;
-    height: 400px;
     border-radius: 20px;
-    object-fit: cover;
 }
 
 .intro-copy {
@@ -2140,5 +2136,42 @@ svg {
 
     .flags-caption {
         font-size: 13px;
+    }
+}
+/* Főoldali portré: négyzetes keret, teljes szélesség, fej + teljes csokor */
+.intro .portrait {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    object-position: center 40% !important;
+    justify-self: start;
+}
+
+@media (min-width: 901px) {
+    .intro {
+        grid-template-columns: 600px 1fr;
+        gap: 80px;
+    }
+}
+
+/* Alapértelmezett nagyítás: 110% minden eszközön */
+html {
+    zoom: 1.1;
+}
+
+body {
+    min-height: calc(100vh / 1.1);
+}
+
+@media (max-width: 900px) {
+    html {
+        zoom: 1;
+    }
+
+    body {
+        min-height: 100vh;
     }
 }
