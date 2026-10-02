@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://david-mezei.github.io/rosemarie-weboldal/sitemap.xml
+Sitemap: https://rosemariepolgar.hu/sitemap.xml
