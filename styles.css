@@ -1627,3 +1627,56 @@ footer {
         font-size: 28px;
     }
 }
+
+/* =========================
+   404 ERROR PAGE
+   ========================= */
+
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.error-content {
+    width: min(600px, 100%);
+}
+
+.error-code {
+    margin: 0;
+    font-family: "Fraunces", serif;
+    font-size: clamp(7rem, 20vw, 12rem);
+    line-height: 0.9;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.error-content h1 {
+    margin: 30px 0 15px;
+}
+
+.error-text {
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.error-actions .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.button-secondary {
+    background: transparent;
+}
