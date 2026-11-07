@@ -116,3 +116,65 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+// LightBox
+const galleryImages = [
+    {
+        src: "assets/ujsagcikk.webp",
+        alt: "Az 1996-os újságcikk"
+    },
+    {
+        src: "assets/ujsag-szines-kep.webp",
+        alt: "A korabeli színes fénykép"
+    }
+];
+
+const lightbox = document.getElementById("press-lightbox");
+const lightboxImage = lightbox.querySelector(".lightbox-image");
+const counter = lightbox.querySelector(".lightbox-counter");
+
+let currentIndex = 0;
+
+function showImage(index) {
+    currentIndex = (index + galleryImages.length) % galleryImages.length;
+
+    lightboxImage.src = galleryImages[currentIndex].src;
+    lightboxImage.alt = galleryImages[currentIndex].alt;
+    counter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+}
+
+function openLightbox(index) {
+    showImage(index);
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+document.querySelectorAll(".gallery-trigger").forEach(button => {
+    button.addEventListener("click", () => {
+        openLightbox(Number(button.dataset.index));
+    });
+});
+
+lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+lightbox.querySelector(".lightbox-prev").addEventListener("click", () => showImage(currentIndex - 1));
+lightbox.querySelector(".lightbox-next").addEventListener("click", () => showImage(currentIndex + 1));
+
+lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown", event => {
+    if (!lightbox.classList.contains("active")) return;
+
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowLeft") showImage(currentIndex - 1);
+    if (event.key === "ArrowRight") showImage(currentIndex + 1);
+});
