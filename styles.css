@@ -2239,3 +2239,21 @@ footer {
         font-size: 18px;
     }
 }
+
+.flags-carousel {
+    width: 100%;
+    --aspect-ratio: 4 / 5;
+}
+
+.flags-carousel sl-carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flags-carousel img {
+    width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+    border-radius: 18px;
+}

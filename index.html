@@ -29,7 +29,7 @@
   <script type="module"
     src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
   <script src="show_popup.js" defer></script>
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 
 
   <!-- Structured Data / JSON-LD -->
@@ -132,8 +132,8 @@
       <div class="cards">
         <article class="card"><span>01.</span>
           <h3>Sokéves nemzetközi és többnyelvű tapasztalat</h3>
-          <p>Svájci-horvát-magyar állampolgárként első kézből adom át a tudást. </p><a href="kapcsolat.html#foglalas">Kattints ide <img
-              src="assets/arrow-right.webp" alt="" /></a>
+          <p>Svájci-horvát-magyar állampolgárként első kézből adom át a tudást. </p><a
+            href="kapcsolat.html#foglalas">Kattints ide <img src="assets/arrow-right.webp" alt="" /></a>
         </article>
         <article class="card"><span>02.</span>
           <h3>Minden korosztálynak: az első betűktől, túl az érettségin és nyelvvizsgán.</h3>
@@ -189,8 +189,18 @@
         </div>
 
         <div class="flags-card">
-          <img src="assets/zaszlok.webp" alt="Polgár Rosemarie a magyar, svájci és horvát zászlóval" class="flags-photo"
-            loading="lazy">
+
+          <sl-carousel class="flags-carousel" navigation pagination mouse-dragging slides-per-page="1"
+            slides-per-move="1" autoplay autoplay-interval="5000" loop>
+            <sl-carousel-item>
+              <img src="assets/zaszlok.webp" alt="Polgár Rosemarie a magyar, svájci és horvát zászlóval">
+            </sl-carousel-item>
+
+            <sl-carousel-item>
+              <img src="assets/vers.webp" alt="Rosemarie verset ábrázoló képe">
+            </sl-carousel-item>
+          </sl-carousel>
+
 
           <blockquote class="flags-caption">
             „La persona pienamente viva è colma di morte.”
